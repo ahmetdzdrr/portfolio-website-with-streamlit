@@ -4,6 +4,7 @@ import time
 from PIL import Image
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components
+from streamlit_javascript import st_javascript
 
 icon = Image.open("images/portfolio_icon.png")
 st.set_page_config(page_title="Portfolio", page_icon=icon, layout="centered")
@@ -217,7 +218,9 @@ if navigation == "Projects":
         st.markdown(f"[{cards[2]['title']}]({cards[2]['link']})")
 
     if st.button("Learn More..."):
-        wb.open_new_tab("https://github.com/ahmetdzdrr")
+        url = "https://github.com/ahmetdzdrr"
+        js = f'window.open("{url}", "_blank").then(r => window.parent.location.href);'
+        st_javascript(js)
 
 
 if navigation == "Competitions":
