@@ -27,6 +27,7 @@ with st.sidebar:
             "align-items": "center",
             "text-align": "center",
             "background": "transparent",
+            "margin-top": "20px"
         },
 
         "icon": {
@@ -50,7 +51,7 @@ with st.sidebar:
 
     st.markdown(
     """
-    <div style="background-color: transparent; margin-top: 45px; text-align: center;">
+    <div style="background-color: transparent; margin-top: 150px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.
         </p>
@@ -88,29 +89,32 @@ if navigation == "Home":
     typewrite_txt = typewrite(text)
     components.html(typewrite_txt, height=40)
 
-    about = """I am Ahmet Dizdar. I graduated from Abant Izzet Baysal University with a degree in Computer Engineering. 
-    I am passionate about the field of artificial intelligence. Combining my skills in data analysis, machine learning, 
-    deep learning, and web development, I create projects."""
+    about = """I am Ahmet Dizdar, a highly motivated and detail-oriented individual with a strong foundation in Computer Engineering, having graduated from Abant Izzet Baysal University. 
+    My passion lies in the vast and evolving realm of artificial intelligence. In addition to my academic background, 
+    I have honed my skills in various domains, including data analysis, machine learning, deep learning, and web development.
+    """
     typewrite_abt = typewrite(about)
     col1, col2 = st.columns(2)
 
     profile = Image.open("images/profile.png")
+    
+    time.sleep(2)
+
     st.markdown("""
         <style>
                 img {
-                    margin-top: 10px;
+                    margin-top: 70px;
                     border-radius: 50%;
                     width: 300px;
                 }
+
         </style>
         """, unsafe_allow_html=True)
     
-    time.sleep(5)
-
     with col1:
         st.image(profile)
     with col2:
-        components.html(typewrite_abt, height=250)
+        components.html(typewrite_abt, height=400)
     
 
 if navigation == "Skills":
@@ -295,12 +299,12 @@ if navigation == "Contact":
     """
     <style>
     img {
-        margin-top: 20px;
+        margin-top: 80px;
         width: 40px;
         margin-left: 50px;
     }
     p {
-        margin-top: 25px;
+        margin-top: 85px;
         margin-right: 25px;
         color: white !important;
         text-decoration: none;
