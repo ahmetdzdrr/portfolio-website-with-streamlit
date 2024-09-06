@@ -76,7 +76,7 @@ with st.sidebar:
     )
 
 if navigation == "Home":
-    def typewrite(text:str):
+    def typewrite(text: str):
         with open("assets/style.css") as f:
             css = f.read()
 
@@ -113,23 +113,44 @@ if navigation == "Home":
 
     profile = Image.open("images/profile.png")
     
+    # Wait for 2 seconds if needed
     time.sleep(2)
 
+    # Custom HTML and CSS for the image
     custom_css = """
         <style>
-            .custom-img {
+            .profile-img {
                 margin-top: 70px;
                 width: 300px;
                 border-radius: 50%;
             }
         </style>
-        """
-    
+    """
+
+    # Convert the image to base64 for embedding
+    def img_to_base64(image: Image.Image) -> str:
+        from io import BytesIO
+        import base64
+
+        buffered = BytesIO()
+        image.save(buffered, format="PNG")
+        return base64.b64encode(buffered.getvalue()).decode()
+
+    profile_base64 = img_to_base64(profile)
+
+    # Use custom HTML to include the styled image
+    profile_html = f"""
+    <div class="profile-img">
+        <img src="data:image/png;base64,{profile_base64}" alt="Profile Image" class="profile-img">
+    </div>
+    """
+
+    # Inject CSS and HTML into Streamlit
+    st.markdown(custom_css, unsafe_allow_html=True)
     with col1:
-        st.image(profile)
+        components.html(profile_html, height=300)
     with col2:
-        components.html(typewrite_abt, height=400)
-    
+        components.html(typewrite_abt, height=400)    
 
 if navigation == "Skills":
 
