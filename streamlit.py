@@ -16,52 +16,50 @@ def css(file_name):
 
 css("assets/style.css")
 
-with st.sidebar:
-    # Sidebar options and navigation
+with st.sidebar:       
     navigation = option_menu(
-        menu_title=None,
-        options=["Home", "Skills", "Projects", "Competitions", "Contact"],
-        icons=["house", "stars", "book", "award", "person-rolodex"],
-        orientation="vertical",
-        default_index=0,
-        styles={
-            "container": {
-                "align-items": "center",
-                "text-align": "center",
-                "background": "transparent",
-                "margin-top": "20px"
+    menu_title=None,
+    options=["Home", "Skills", "Projects", "Competitions", "Contact"],
+    icons=["house", "stars", "book", "award", "person-rolodex"],
+    orientation="vertical",
+    default_index=0,
+    styles={
+        "container": {
+            "align-items": "center",
+            "text-align": "center",
+            "background": "transparent",
+            "margin-top": "20px"
+        },
+
+        "icon": {
+            "color": "#000", 
+            "font-size": "20px"
             },
 
-            "icon": {
-                "color": "#000", 
-                "font-size": "20px"
-                },
+        "nav-link": {
+            "display": "flex",
+            "justify-content": "center",
+            "align-items": "center",
+            "text-align": "center",
+            "font-size": "15px",
+            "--hover-color": "#7FB1AF",
+            "font-weight": "bold",
+        },
 
-            "nav-link": {
-                "display": "flex",
-                "justify-content": "center",
-                "align-items": "center",
-                "text-align": "center",
-                "font-size": "15px",
-                "--hover-color": "#7FB1AF",
-                "font-weight": "bold",
-            },
-
-            "nav-link-selected": {"background-color": "#04AA6D"},
-        }
+        "nav-link-selected": {"background-color": "#04AA6D"},
+    }
     )
 
     st.markdown(
-        """
-        <div style="background-color: transparent; text-align: center; margin-top: 20px;">
-            <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-                <img class="bmc-button" src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
-                alt="Buy Me A Coffee" style="box-shadow: none; border: none;">
-            </a>
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
+    """
+    <p style="background-color: transparent; text-align: center; margin-top: 20px; border-radius: 0px !important;">
+        <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
+            alt="Buy Me A Coffee" style="box-shadow: none; border: none;">
+        </a>
+    </p>
+    """, 
+    unsafe_allow_html=True)
 
     st.markdown(
     """
@@ -73,7 +71,6 @@ with st.sidebar:
     """,
     unsafe_allow_html=True
     )
-
 
 if navigation == "Home":
     def typewrite(text:str):
@@ -117,17 +114,20 @@ if navigation == "Home":
 
     st.markdown("""
         <style>
-            .home-img {
-            margin-top: 70px;
-            width: 300px;
+                img {
+                    margin-top: 70px;
+                    border-radius: 10px;
+                    width: 300px;
                 }
-        </style>""", unsafe_allow_html = True)
+
+        </style>
+        """, unsafe_allow_html=True)
     
     with col1:
         st.image(profile)
     with col2:
         components.html(typewrite_abt, height=400)
-
+    
 
 if navigation == "Skills":
 
@@ -335,5 +335,3 @@ if navigation == "Contact":
 
     col5.image(media[2]['image'])
     col6.markdown(f"[{media[2]['title']}]({media[2]['link']})")
-
-    
