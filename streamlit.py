@@ -117,16 +117,16 @@ if navigation == "Home":
 
     custom_css = """
         <style>
-            .custom-img {
+            .img {
                 margin-top: 70px;
                 width: 300px;
-                border-radius: 50%;
+                border-radius: 5px;
             }
         </style>
         """
     
     with col1:
-        st.image(profile, width=600)
+        st.image(profile)
     with col2:
         components.html(typewrite_abt, height=400)
 
