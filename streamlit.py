@@ -126,7 +126,7 @@ if navigation == "Home":
         """
     
     with col1:
-        st.image(profile, height=600)
+        st.image(profile, width=600)
     with col2:
         components.html(typewrite_abt, height=400)
 
