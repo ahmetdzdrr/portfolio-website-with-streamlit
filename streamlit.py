@@ -52,18 +52,6 @@ with st.sidebar:
     )
 
     st.markdown(
-    """
-    <div style="background-color: transparent; margin-top: 150px; text-align: center;">
-        <p style="font-size: 15px; font-weight: bold">
-            &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
-        </p>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
-
-    # Buy Me a Coffee Button with a specific class
-    st.markdown(
         """
         <div style="background-color: transparent; text-align: center; margin-top: 20px;">
             <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
@@ -74,6 +62,18 @@ with st.sidebar:
         """, 
         unsafe_allow_html=True
     )
+
+    st.markdown(
+    """
+    <div style="background-color: transparent; text-align: center;">
+        <p style="font-size: 15px; font-weight: bold">
+            &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+
 
 if navigation == "Home":
     def typewrite(text:str):
@@ -117,7 +117,7 @@ if navigation == "Home":
 
     custom_css = """
         <style>
-            .img {
+            img {
                 margin-top: 70px;
                 width: 300px;
                 border-radius: 5px;
