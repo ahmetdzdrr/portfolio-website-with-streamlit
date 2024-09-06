@@ -59,20 +59,7 @@ with st.sidebar:
     </div>
     """,
     unsafe_allow_html=True
-    )
-
-    # Buy Me a Coffee Button with custom styles
-    st.markdown(
-        """
-        <div style="background-color: transparent; text-align: center; margin-top: 20px;">
-            <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-                <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
-                alt="Buy Me A Coffee" style="box-shadow: none; border: none; width: auto; height: auto;">
-            </a>
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
+    )    
 
 if navigation == "Home":
     def typewrite(text:str):
@@ -118,7 +105,6 @@ if navigation == "Home":
         <style>
                 img {
                     margin-top: 70px;
-                    border-radius: 50%;
                     width: 300px;
                 }
 
