@@ -52,26 +52,19 @@ with st.sidebar:
 
     st.markdown(
     """
-    <div style="background-color: transparent; margin-top: 250px; text-align: center;">
+    <div style="background-color: transparent; margin-top: 200px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
         </p>
+        <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
+                alt="Buy Me A Coffee" style="box-shadow: none; border: none; width: auto; height: auto;">
+        </a>
     </div>
     """,
     unsafe_allow_html=True
     )
 
-    st.markdown(
-        """
-        <div style="background-color: transparent; text-align: center; margin-top: 20px;">
-            <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-                <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
-                alt="Buy Me A Coffee" style="box-shadow: none; border: none; width: auto; height: auto;">
-            </a>
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
 
 if navigation == "Home":
     def typewrite(text:str):
