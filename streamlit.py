@@ -59,77 +59,18 @@ with st.sidebar:
     </div>
     """,
     unsafe_allow_html=True
-)
-    import streamlit as st
-import webbrowser as wb
-import time
-from PIL import Image
-from streamlit_option_menu import option_menu
-import streamlit.components.v1 as components
-from streamlit_javascript import st_javascript
-
-icon = Image.open("images/portfolio_icon.png")
-st.set_page_config(page_title="Portfolio", page_icon=icon, layout="centered")
-
-
-def css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-css("assets/style.css")
-
-with st.sidebar:       
-    navigation = option_menu(
-    menu_title=None,
-    options=["Home", "Skills", "Projects", "Competitions", "Contact"],
-    icons=["house", "stars", "book", "award", "person-rolodex"],
-    orientation="vertical",
-    default_index=0,
-    styles={
-        "container": {
-            "align-items": "center",
-            "text-align": "center",
-            "background": "transparent",
-            "margin-top": "20px"
-        },
-
-        "icon": {
-            "color": "#000", 
-            "font-size": "20px"
-            },
-
-        "nav-link": {
-            "display": "flex",
-            "justify-content": "center",
-            "align-items": "center",
-            "text-align": "center",
-            "font-size": "15px",
-            "--hover-color": "#7FB1AF",
-            "font-weight": "bold",
-        },
-
-        "nav-link-selected": {"background-color": "#04AA6D"},
-    }
     )
 
     st.markdown(
     """
-    <div style="background-color: transparent; margin-top: 150px; text-align: center;">
-        <p style="font-size: 15px; font-weight: bold">
-            &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
-        </p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-    st.markdown(
-        """
-        <p align: 'center'>
+    <div style="background-color: transparent; text-align: center; margin-top: 20px;">
         <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=your-username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
+            alt="Buy Me A Coffee" style="box-shadow: none; border: none;">
         </a>
-        </p>
-        """, unsafe_allow_html=True)
+    </div>
+    """, 
+    unsafe_allow_html=True)
 
 if navigation == "Home":
     def typewrite(text:str):
