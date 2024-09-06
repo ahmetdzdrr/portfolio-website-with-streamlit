@@ -115,15 +115,26 @@ if navigation == "Home":
     
     time.sleep(2)
 
-    st.markdown("""
+    custom_css = """
         <style>
-                .home-img {
-                    margin-top: 70px;
-                    width: 300px;
-                }
-
+            .custom-img {
+                margin-top: 70px;
+                width: 300px;
+                border-radius: 50%;
+            }
         </style>
-        """, unsafe_allow_html=True)
+        """
+        
+        # Define custom HTML for the image
+        custom_html = f"""
+        <div class="custom-img">
+            <img src="data:image/png;base64,{profile}" alt="Profile Image" class="custom-img">
+        </div>
+        """
+        
+    # Inject CSS and HTML into Streamlit
+    st.markdown(custom_css, unsafe_allow_html=True)
+    st.markdown(custom_html, unsafe_allow_html=True)
     
     with col1:
         st.image(profile)
