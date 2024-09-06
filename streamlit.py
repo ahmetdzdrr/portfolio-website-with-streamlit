@@ -55,14 +55,19 @@ with st.sidebar:
     <div style="background-color: transparent; margin-top: 150px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
-            <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=your-username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee">
-            </a>
         </p>
     </div>
     """,
     unsafe_allow_html=True
 )
+    st.markdown(
+        """
+        <p align: 'center'>
+        <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=your-username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee">
+        </a>
+        </p>
+        """, unsafe_allow_html=True)
 
 if navigation == "Home":
     def typewrite(text:str):
