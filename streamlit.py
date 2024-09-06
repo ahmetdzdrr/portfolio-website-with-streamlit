@@ -65,7 +65,7 @@ with st.sidebar:
 
     st.markdown(
     """
-    <div style="background-color: transparent; text-align: center;">
+    <div style="background-color: transparent; margin-top: 50px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
         </p>
@@ -115,15 +115,13 @@ if navigation == "Home":
     
     time.sleep(2)
 
-    custom_css = """
+    st.markdown("""
         <style>
-            img {
-                margin-top: 70px;
-                width: 300px;
-                border-radius: 5px;
-            }
-        </style>
-        """
+            .home-img {
+            margin-top: 70px;
+            width: 300px;
+                }
+        </style>""", unsafe_allow_html = True)
     
     with col1:
         st.image(profile)
