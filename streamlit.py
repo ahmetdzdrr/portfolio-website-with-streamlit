@@ -17,6 +17,7 @@ def css(file_name):
 css("assets/style.css")
 
 with st.sidebar:
+    # Sidebar options and navigation
     navigation = option_menu(
         menu_title=None,
         options=["Home", "Skills", "Projects", "Competitions", "Contact"],
@@ -52,19 +53,27 @@ with st.sidebar:
 
     st.markdown(
     """
-    <div style="background-color: transparent; margin-top: 200px; text-align: center;">
+    <div style="background-color: transparent; margin-top: 150px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
         </p>
-        <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-                <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
-                alt="Buy Me A Coffee" style="box-shadow: none; border: none; width: auto; height: auto; margin-top: 0 !important;">
-        </a>
     </div>
     """,
     unsafe_allow_html=True
     )
 
+    # Buy Me a Coffee Button with a specific class
+    st.markdown(
+        """
+        <div style="background-color: transparent; text-align: center; margin-top: 20px;">
+            <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
+                <img class="bmc-button" src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
+                alt="Buy Me A Coffee" style="box-shadow: none; border: none;">
+            </a>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
 
 if navigation == "Home":
     def typewrite(text:str):
@@ -108,7 +117,7 @@ if navigation == "Home":
 
     st.markdown("""
         <style>
-                img {
+                .home-img {
                     margin-top: 70px;
                     width: 300px;
                 }
