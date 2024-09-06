@@ -126,7 +126,7 @@ if navigation == "Home":
         """
         
         # Define custom HTML for the image
-        custom_html = f"""
+    custom_html = f"""
         <div class="custom-img">
             <img src="data:image/png;base64,{profile}" alt="Profile Image" class="custom-img">
         </div>
