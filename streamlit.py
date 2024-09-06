@@ -52,7 +52,7 @@ with st.sidebar:
 
     st.markdown(
     """
-    <div style="background-color: transparent; margin-top: 150px; text-align: center;">
+    <div style="background-color: transparent; margin-top: 250px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
         </p>
