@@ -52,17 +52,6 @@ with st.sidebar:
 
     st.markdown(
     """
-    <p style="background-color: transparent; text-align: center; margin-top: 20px; border-radius: 0px !important;">
-        <a href="https://www.buymeacoffee.com/ahmetdizdar" target="_blank">
-            <img class="bmc-button" src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ahmetdizdar&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" 
-            alt="Buy Me A Coffee" style="box-shadow: none; border: none;">
-        </a>
-    </p>
-    """, 
-    unsafe_allow_html=True)
-
-    st.markdown(
-    """
     <div style="background-color: transparent; margin-top: 50px; text-align: center;">
         <p style="font-size: 15px; font-weight: bold">
             &copy; 2024 Ahmet Dizdar. All Rights Reserved.        
